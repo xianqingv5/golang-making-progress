@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+type data struct {
+	z int
+}
+
+func check(a data) bool {
+	return a == data{}
+}
+
 func main() {
 
 	sn1 := struct {
@@ -29,4 +37,16 @@ func main() {
 	if sm1 == sm2 {
 		fmt.Println("sm1 == sm2")
 	}
+
+	fmt.Println("----------------")
+
+	var a struct {
+		x    int
+		y    int
+		data struct {
+			z int
+		}
+	}
+	a.data = struct{ z int }{100}
+	println(check(a.data))
 }
