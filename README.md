@@ -2,7 +2,7 @@
 golang精进
 
 1，是否可以编译通过？如果通过，输出什么？
-{```}
+<p>
 func main() {
 	i := GetValue()
 
@@ -20,7 +20,7 @@ func main() {
 func GetValue() int {
 	return 1
 }
-{```}
+<p>
 解析
 考点：type
 编译失败，因为type只能使用在interface
