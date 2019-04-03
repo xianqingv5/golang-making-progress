@@ -14,11 +14,20 @@ func (ua *UserAges) Add(name string, age int) {
 }
 
 func (ua *UserAges) Get(name string) int {
+	ua.Lock()
+	defer ua.Unlock()
 	if age, ok := ua.ages[name]; ok {
 		return age
 	}
 	return -1
 }
+
+// func (ua *UserAges) Get(name string) int {
+// 	if age, ok := ua.ages[name]; ok {
+// 		return age
+// 	}
+// 	return -1
+// }
 
 func main() {
 	ua := UserAges{}
