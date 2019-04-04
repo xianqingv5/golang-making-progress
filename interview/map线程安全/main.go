@@ -2,17 +2,20 @@ package main
 
 import "sync"
 
+// UserAges UserAges
 type UserAges struct {
 	ages map[string]int
 	sync.Mutex
 }
 
+// Add add
 func (ua *UserAges) Add(name string, age int) {
 	ua.Lock()
 	defer ua.Unlock()
 	ua.ages[name] = age
 }
 
+// Get get
 func (ua *UserAges) Get(name string) int {
 	ua.Lock()
 	defer ua.Unlock()
