@@ -1,3 +1,4 @@
+// https://www.cnblogs.com/ghj1976/archive/2013/04/27/3047528.html
 package syncmap
 
 import "sync"

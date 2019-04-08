@@ -31,3 +31,7 @@ https://github.com/qibin0506/go-designpattern
 
 10，sego 分词
 https://github.com/huichen/sego
+
+11，《看懂每一行代码 - kubernetes》
+https://www.cnblogs.com/cloudgeek/category/1231156.html
+
